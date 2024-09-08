@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История - Five Nights at Freddy's</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для фиксированного хедера */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        header nav ul li {
+            display: inline;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Стили для секций */
+        section {
+            padding: 60px 20px;
+        }
+
+        /* Стили для фона с видео */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Стили для адаптивности */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Five Nights at Freddy's</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О игре</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="media.html">Медиа</a></li>
+                <li><a href="community.html">Сообщество</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Фоновое видео -->
+    <video class="video-background" autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает воспроизведение видео.
+    </video>
+
+    <section id="history">
+        <h2>История</h2>
+        <p>Серия Five Nights at Freddy's была создана Скоттом Коутоном и впервые была выпущена в августе 2014 года. Игра быстро завоевала популярность благодаря уникальному игровому процессу и захватывающей атмосфере. В начале своей истории игра была относительно простой по графике и геймплейу, но вскоре она завоевала признание благодаря своей инновационной концепции. История игры вращается вокруг различных заведений, таких как пиццерии, где аниматроники становятся зловещими существами, стремящимися запугать игрока.</p>
+        <p>Каждая новая игра в серии вводила новые элементы и расширяла сюжетную линию. Первая игра представляла собой испытание на выживание в ограниченном пространстве, где игрок должен был использовать камеры наблюдения и ограниченное количество электроэнергии для защиты. Следующие выпуски, такие как Five Nights at Freddy's 2 и 3, добавляли новые механики и локации, такие как новые типы аниматроников и более сложные уровни сложности.</p>
+        <p>Помимо основных игр, серия также включала несколько спин-оффов, книг и даже адаптаций в другие медиаформаты. Скотт Коутон сумел создать мир, который привлек внимание миллионов игроков по всему миру, и его работы продолжают развиваться с каждым новым выпуском. Вдохновленная реальными событиями и запоминающимися персонажами, серия FNAF привлекла не только любителей хорроров, но и поклонников креативных и нестандартных игр.</p>
+        <p>Если вы ничего не поняли из текста, то посмотрите видео ниже, чтобы лучше понять всю историю и особенности игры.</p>
+
+        <!-- Вставка видео через iframe в разделе "История" -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3-PFKDpCRoc?si=7rZFoBnO3CuazXYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Five Nights at Freddy's Фан-сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Nights at Freddy's - Фан-сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для фиксированного хедера */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        header nav ul li {
+            display: inline;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Кнопка "История" в правом верхнем углу */
+        .history-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .history-button:hover {
+            background-color: #555;
+        }
+
+        /* Стили для секций */
+        section {
+            padding: 60px 20px;
+            display: none; /* По умолчанию скрываем все секции */
+        }
+
+        /* Стили для активной секции */
+        .active {
+            display: block;
+        }
+
+        /* Стили для фона с видео */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Стили для изображений в медиа-разделе */
+        .media-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Стили для адаптивности */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Five Nights at Freddy's</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('about')">О игре</a></li>
+                <li><a href="#" onclick="showSection('news')">Новости</a></li>
+                <li><a href="#" onclick="showSection('media')">Медиа</a></li>
+                <li><a href="#" onclick="showSection('community')">Сообщество</a></li>
+                <li><a href="#" onclick="showSection('contact')">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="history.html" class="history-button">История</a>
+    </header>
+
+    <!-- Фоновое видео -->
+    <video class="video-background" autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает воспроизведение видео.
+    </video>
+
+    <section id="about" class="active">
+        <h2>О игре</h2>
+        <p>Five Nights at Freddy's (FNAF) — это серия хоррор-игр, в которых игроки работают ночными охранниками в различных заведениях, населенных аниматрониками, которые оживают ночью. Игра ставит перед игроками задачу выжить до утра, следя за камерами наблюдения и управляя системами безопасности, чтобы не попасть в руки зловещих существ.</p>
+    </section>
+
+    <section id="news">
+        <h2>Новости</h2>
+        <p>Будьте в курсе последних новостей и обновлений о FNAF.</p>
+    </section>
+
+    <section id="media">
+        <h2>Медиа</h2>
+        <p>Раздел медиа включает в себя различные материалы, связанные с серией Five Nights at Freddy's, такие как скриншоты, видео и музыка.</p>
+
+        <!-- Вставка первого видео через iframe в разделе "Медиа", над текстом о песне -->
+        <h3>Видео 1</h3>
+        <p>Ниже вы можете просмотреть видео, которое дополнительно расскажет о различных аспектах серии Five Nights at Freddy's.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eY8atBk4DZ0?si=ThVh-qxqGmoKOJ-p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- Текст про песню от The Living Tombstone -->
+        <h3>Фоновая музыка</h3>
+        <p>Фоновая музыка, представленная на нашем сайте, включает знаменитую песню "Five Nights at Freddy's" от музыкальной компании The Living Tombstone. Эта композиция завоевала популярность среди фанатов игры и стала неотъемлемой частью ее культуры. Слушайте и наслаждайтесь атмосферой, которую создает эта музыка.</p>
+        <audio src="music.mp3" controls></audio>
+
+        <!-- Вставка второго видео через iframe в разделе "Медиа", под текстом о песне -->
+        <h3>Видео 2</h3>
+        <p>Также вы можете посмотреть следующее видео, которое покажет больше интересных моментов и фан-материалов из мира FNAF.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/l18A5BOTlzE?si=HICDThd3zi0LphtR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="media-content">
+            <img src="https://bryansktoday.ru/uploads/common/20cb01411242f51b_XL.jpg" alt="Скриншот 1">
+            <img src="https://i.pinimg.com/736x/21/9d/7c/219d7cf5ca8780d2e5652e39271e7eed.jpg" alt="Скриншот 2">
+            <img src="https://gas-kvas.com/uploads/posts/2023-02/1677042153_gas-kvas-com-p-risunki-na-temu-fnaf-5.jpg" alt="Фан-арт">
+        </div>
+    </section>
+
+    <section id="community">
+        <h2>Сообщество</h2>
+        <p>Присоединяйтесь к обсуждению, участвуйте в конкурсах и взаимодействуйте с другими фанатами FNAF.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами через <a href="mailto:info@fnaffansite.com">email</a> или следите за нами в социальных сетях.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Five Nights at Freddy's Фан-сайт. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Скрываем все секции
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Показываем выбранную секцию
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+
+        // Изначально показываем секцию "О игре"
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('about');  // Показываем секцию "О игре" по умолчанию
+        });
+    </script>
+</body>
+</html>
